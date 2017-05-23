@@ -1,0 +1,25 @@
+{
+  "name": "react-map-components",
+  "version": "1.0.0",
+  "description": "A wrapper component to map props to multiple children components using an array of props. Edit",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PorterK/react-map-components.git"
+  },
+  "keywords": [
+    "React",
+    "Map",
+    "Components",
+    "Props"
+  ],
+  "author": "Kalob Porter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PorterK/react-map-components/issues"
+  },
+  "homepage": "https://github.com/PorterK/react-map-components#readme"
+}
