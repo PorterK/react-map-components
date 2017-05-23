@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/PorterK/react-map-components/issues"
   },
-  "homepage": "https://github.com/PorterK/react-map-components#readme"
+  "homepage": "https://github.com/PorterK/react-map-components#readme",
+  "peerDepenencies": {
+    "react": "^15.4.2"
+  }
 }
