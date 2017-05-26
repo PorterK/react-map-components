@@ -1,5 +1,5 @@
 # React Map Components
-A componentized utility for idiomatically rendering custom components based on an array of objects.
+A componentized utility for idiomatically rendering desired components based on an array of objects.
 
 ## Example Implementation
 
@@ -43,7 +43,7 @@ import React, { Component } from 'react';
 
 export default class CustomComponent extends Component {
   render() {
-    const { data, name, id } = this.props;
+    const { id, name, data } = this.props;
 
     return (
       <div id={id}>
