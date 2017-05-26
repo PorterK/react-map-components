@@ -1,19 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component, DOM } from 'react';
 import PropTypes from 'prop-types';
 
 export default class ReactMap extends Component {
   static propTypes = {
     for: PropTypes.array,
-    component: PropTypes.element
+    component: PropTypes.element,
+    wrapper: PropTypes.string
   }
   render() {
-    const { for: propsArray, component: Child } = this.props;
+    const { for: propsArray, component: Child, wrapper } = this.props;
+
+    const Component = React.DOM[wrapper];
+
     return (
-      <div>
+      <Component>
       {
         propsArray.map(props => <Child { ...props } />)
       }
-      </div>
+      </Component>
     );
   }
 }
