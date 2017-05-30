@@ -17,11 +17,11 @@ export default class MapComponents extends Component {
   }
 
   render() {
-    const { for: propsArray, component: Child, wrapper } = this.props;
+    const { for: propsArray, component: Child, wrapper, ...wrapperProps } = this.props;
 
     return React.createElement(
       wrapper,
-      filterInvalidDOMProps(this.props),
+      filterInvalidDOMProps(wrapperProps),
       propsArray.map(props => <Child {...props} />));
   }
 }
