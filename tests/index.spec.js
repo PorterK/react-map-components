@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import React, { Component } from 'react';
 import ReactTestRenderer from 'react-test-renderer';
 import expect from 'expect';
