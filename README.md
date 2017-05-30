@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/PorterK/react-map-components.svg?branch=master)](https://travis-ci.org/PorterK/react-map-components)
 [![Code Climate](https://codeclimate.com/github/PorterK/react-map-components/badges/gpa.svg)](https://codeclimate.com/github/PorterK/react-map-components)
 # React Map Components
 A componentized utility for idiomatically rendering desired components based on an array of objects.
