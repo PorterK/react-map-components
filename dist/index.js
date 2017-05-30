@@ -14,6 +14,10 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _filterInvalidDomProps = require('filter-invalid-dom-props');
+
+var _filterInvalidDomProps2 = _interopRequireDefault(_filterInvalidDomProps);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -40,7 +44,7 @@ var MapComponents = function (_Component) {
           wrapper = _props.wrapper;
 
 
-      return _react2.default.createElement(wrapper, this.props, propsArray.map(function (props) {
+      return _react2.default.createElement(wrapper, (0, _filterInvalidDomProps2.default)(this.props), propsArray.map(function (props) {
         return _react2.default.createElement(Child, props);
       }));
     }
