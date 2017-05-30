@@ -13,10 +13,10 @@
     "url": "git+https://github.com/PorterK/react-map-components.git"
   },
   "keywords": [
-    "React",
-    "Map",
-    "Components",
-    "Props"
+    "react",
+    "map",
+    "components",
+    "props"
   ],
   "author": "Kalob Porter",
   "license": "ISC",
