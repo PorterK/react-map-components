@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import filterInvalidDOMProps from 'filter-invalid-dom-props';
 
 export default class MapComponents extends Component {
   static propTypes = {
@@ -20,7 +21,7 @@ export default class MapComponents extends Component {
 
     return React.createElement(
       wrapper,
-      this.props,
+      filterInvalidDOMProps(this.props),
       propsArray.map(props => <Child {...props} />));
   }
 }
