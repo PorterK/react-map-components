@@ -20,7 +20,7 @@ var _filterInvalidDomProps2 = _interopRequireDefault(_filterInvalidDomProps);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -43,12 +43,12 @@ var MapComponents = function (_Component) {
       var _props = this.props,
           propsArray = _props.for,
           Child = _props.component,
-          wrapper = _props.wrapper;
+          wrapper = _props.wrapper,
+          wrapperProps = _objectWithoutProperties(_props, ['for', 'component', 'wrapper']);
 
-
-      return _react2.default.createElement.apply(_react2.default, [wrapper].concat(_toConsumableArray((0, _filterInvalidDomProps2.default)(this.props)), [propsArray.map(function (props) {
+      return _react2.default.createElement(wrapper, (0, _filterInvalidDomProps2.default)(wrapperProps), propsArray.map(function (props) {
         return _react2.default.createElement(Child, props);
-      })]));
+      }));
     }
   }]);
 
