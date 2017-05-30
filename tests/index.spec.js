@@ -39,7 +39,7 @@ class TestComponent extends Component {
   render() {
 
     return (
-      <MapComponents for={data} component={WrappedComponent} />
+      <MapComponents for={data} component={WrappedComponent} some='thing' height='40' />
     );
   }
 }
@@ -61,6 +61,12 @@ describe('MapComponent', () => {
     output.children.map((child, index) => {
       expect(child.props.id).toEqual(data[index].id);
     })
+  });
+
+  it('filters invalid props correctly', () => {
+    expect(output.props).toInclude({ height: 40 });
+    expect(output.props).toExclude({ some: 'thing' });
+    expect(output.props).toExclude({ for: data });
   });
 
 });
