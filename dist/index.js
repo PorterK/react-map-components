@@ -44,9 +44,10 @@ var MapComponents = function (_Component) {
           propsArray = _props.for,
           Child = _props.component,
           wrapper = _props.wrapper,
-          wrapperProps = _objectWithoutProperties(_props, ['for', 'component', 'wrapper']);
+          transform = _props.transform,
+          wrapperProps = _objectWithoutProperties(_props, ['for', 'component', 'wrapper', 'transform']);
 
-      return _react2.default.createElement(wrapper, (0, _filterInvalidDomProps2.default)(wrapperProps), propsArray.map(function (props) {
+      return _react2.default.createElement(wrapper, transform, (0, _filterInvalidDomProps2.default)(wrapperProps), propsArray.map(function (props) {
         return _react2.default.createElement(Child, props);
       }));
     }
@@ -58,9 +59,11 @@ var MapComponents = function (_Component) {
 MapComponents.propTypes = {
   for: _propTypes2.default.array.isRequired,
   component: _propTypes2.default.oneOfType([_propTypes2.default.element, _propTypes2.default.func]).isRequired,
-  wrapper: _propTypes2.default.string
+  wrapper: _propTypes2.default.string,
+  transform: _propTypes2.default.string
 };
 MapComponents.defaultProps = {
-  wrapper: 'div'
+  wrapper: 'div',
+  transform: 'none'
 };
 exports.default = MapComponents;

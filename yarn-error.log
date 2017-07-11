@@ -1,0 +1,90 @@
+Arguments: 
+  /usr/local/Cellar/node/7.10.0/bin/node /usr/local/bin/yarn publish
+
+PATH: 
+  /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
+
+Yarn version: 
+  0.24.6
+
+Node version: 
+  7.10.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "react-map-components",
+    "version": "1.0.8",
+    "description": "A wrapper component to map props to multiple children components using an array of props. Edit",
+    "main": "dist/index.js",
+    "scripts": {
+      "compile": "./node_modules/.bin/babel --presets es2017,es2015,react,stage-2 --out-dir dist/ src/",
+      "prepublish": "npm run compile",
+      "test": "./node_modules/.bin/mocha --compilers js:babel-core/register tests/**/*.spec.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/PorterK/react-map-components.git"
+    },
+    "keywords": [
+      "React",
+      "Map",
+      "Components",
+      "Props"
+    ],
+    "author": "Kalob Porter",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/PorterK/react-map-components/issues"
+    },
+    "homepage": "https://github.com/PorterK/react-map-components#readme",
+    "peerDepenencies": {
+      "react": "^15.4.2"
+    },
+    "devDependencies": {
+      "babel-cli": "^6.24.1",
+      "babel-core": "^6.24.1",
+      "babel-eslint": "^7.2.3",
+      "babel-preset-es2015": "^6.24.1",
+      "babel-preset-es2017": "^6.24.1",
+      "babel-preset-react": "^6.24.1",
+      "babel-preset-stage-2": "^6.24.1",
+      "babel-require": "^1.0.1",
+      "eslint": "^3.19.0",
+      "eslint-config-airbnb": "^15.0.1",
+      "eslint-plugin-babel": "^4.1.1",
+      "eslint-plugin-import": "^2.2.0",
+      "eslint-plugin-jsx-a11y": "^5.0.3",
+      "eslint-plugin-react": "^7.0.1",
+      "expect": "^1.20.2",
+      "mocha": "^3.3.0",
+      "prop-types": "^15.5.10",
+      "react": "^15.5.4",
+      "react-dom": "^15.5.4",
+      "react-test-renderer": "^15.5.4"
+    },
+    "dependencies": {
+      "filter-invalid-dom-props": "^1.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://registry.yarnpkg.com/react-map-components: "You cannot publish over the previously published version 1.0.8."
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/0.24.6/libexec/lib/yarn-cli.js:56255:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/0.24.6/libexec/lib/yarn-cli.js:107854:22)
+      at emitTwo (events.js:106:13)
+      at Request.emit (events.js:194:7)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/0.24.6/libexec/lib/yarn-cli.js:108837:10)
+      at emitOne (events.js:96:13)
+      at Request.emit (events.js:191:7)
+      at Gunzip.<anonymous> (/usr/local/Cellar/yarn/0.24.6/libexec/lib/yarn-cli.js:108757:12)
+      at Object.onceWrapper (events.js:293:19)
+      at emitNone (events.js:91:20)
