@@ -10,17 +10,20 @@ export default class MapComponents extends Component {
       PropTypes.func,
     ]).isRequired,
     wrapper: PropTypes.string,
+    transform: PropTypes.string,
   }
 
   static defaultProps = {
     wrapper: 'div',
+    transform: 'none',
   }
 
   render() {
-    const { for: propsArray, component: Child, wrapper, ...wrapperProps } = this.props;
+    const { for: propsArray, component: Child, wrapper, transform, ...wrapperProps } = this.props;
 
     return React.createElement(
       wrapper,
+      transform,
       filterInvalidDOMProps(wrapperProps),
       propsArray.map(props => <Child {...props} />));
   }
