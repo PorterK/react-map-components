@@ -47,7 +47,7 @@ var MapComponents = function (_Component) {
           transform = _props.transform,
           wrapperProps = _objectWithoutProperties(_props, ['for', 'component', 'wrapper', 'transform']);
 
-      return _react2.default.createElement(wrapper, transform, (0, _filterInvalidDomProps2.default)(wrapperProps), propsArray.map(function (props) {
+      return _react2.default.createElement(wrapper, [(0, _filterInvalidDomProps2.default)(wrapperProps), transform], propsArray.map(function (props) {
         return _react2.default.createElement(Child, props);
       }));
     }
