@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -47,7 +49,9 @@ var MapComponents = function (_Component) {
           transform = _props.transform,
           wrapperProps = _objectWithoutProperties(_props, ['for', 'component', 'wrapper', 'transform']);
 
-      return _react2.default.createElement(wrapper, [(0, _filterInvalidDomProps2.default)(wrapperProps), transform], propsArray.map(function (props) {
+      var domProps = (0, _filterInvalidDomProps2.default)(wrapperProps);
+
+      return _react2.default.createElement(wrapper, _extends({}, domProps, { transform: transform }), propsArray.map(function (props) {
         return _react2.default.createElement(Child, props);
       }));
     }

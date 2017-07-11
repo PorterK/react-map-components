@@ -1,6 +1,6 @@
 {
   "name": "react-map-components",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "description": "A wrapper component to map props to multiple children components using an array of props. Edit",
   "main": "dist/index.js",
   "scripts": {
