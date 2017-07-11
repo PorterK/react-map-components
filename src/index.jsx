@@ -23,8 +23,7 @@ export default class MapComponents extends Component {
 
     return React.createElement(
       wrapper,
-      transform,
-      filterInvalidDOMProps(wrapperProps),
+      [filterInvalidDOMProps(wrapperProps), transform],
       propsArray.map(props => <Child {...props} />));
   }
 }
